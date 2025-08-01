@@ -19,7 +19,7 @@ export default function MainTabs() {
 
           if (route.name === 'Home') {
             iconName = focused ? 'home' : 'home-outline';
-          } else if (route.name === 'Users') {
+          } else if (route.name === 'Kullanıcılar') {
             iconName = focused ? 'people' : 'people-outline';
           } else if (route.name === 'NewGame') {
             iconName = focused ? 'game-controller' : 'game-controller-outline';
@@ -33,7 +33,7 @@ export default function MainTabs() {
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Users" component={UsersScreen} />
+      <Tab.Screen name="Kullanıcılar" component={UsersScreen} />
       <Tab.Screen name="NewGame" component={NewGameScreen} options={{ title: 'Yeni Oyun' }} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>

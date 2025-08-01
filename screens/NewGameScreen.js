@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Alert, SafeAreaView, ScrollView, Text } from 'react-native';
 
 export default function NewGameScreen() {
   const renderSquare = (row, col) => {
@@ -26,10 +26,36 @@ export default function NewGameScreen() {
     );
   }
 
-  return <View style={styles.board}>{rows}</View>;
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <Text style={styles.homepage}>Yeni Oyun</Text>
+        <View style={styles.board}>{rows}</View>
+      </ScrollView>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
-  board: { alignSelf:'center', marginTop:20 },
-  square: { width:40, height:40 },
+  safeArea: {
+    flex: 1,
+  },
+  scrollContent: {
+    padding: 15,
+    alignItems: 'center',
+  },
+  homepage: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    alignSelf:'center',
+    marginBottom: 15,
+  },
+  board: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  square: {
+    width: 50,
+    height: 50,
+  },
 });
