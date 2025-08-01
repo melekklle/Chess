@@ -28,7 +28,7 @@ export default function MainTabs() {
           }
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: '#00881b91',
+        tabBarActiveTintColor: '#769656',
         tabBarInactiveTintColor: 'gray',
       })}
     >
