@@ -4,7 +4,7 @@ import { Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Alert, Vi
 export default function ProfileScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
-      <ScrollView contentContainerStyle={styles.scrollContent}>
+      <ScrollView style={styles.scrollContent}>
         <Text style={styles.profile}>Profil</Text>
 
         <View style={styles.profilestyle}>
